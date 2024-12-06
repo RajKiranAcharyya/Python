@@ -12,7 +12,7 @@ fibo(0, 1, n)
 filename = "fibonacci_numbers.txt"
 with open(filename, "w") as file:
     for f in fibonacci:
-        file.write(str(f) + "\n")
+        file.write(str(f) + " ")
 
 
 print(f"fibonacci numbers has been written to {filename}")

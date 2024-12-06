@@ -1,0 +1,16 @@
+import csv
+
+data = [
+    {"Region": "North", "Sales": 300},
+    {"Region": "West", "Sales": 250},
+    {"Region": "East", "Sales": 45},
+    {"Region": "South", "Sales": 85},
+]
+
+file_path = "Sample_CSV_file.csv"
+with open(file_path, "w", newline="") as CSVfile:
+    fieldnames = ["Region", "Sales"]
+    writer = csv.DictWriter(CSVfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(data)
+print(f"Dictionary data exported to csv file {file_path}")
